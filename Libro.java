@@ -4,14 +4,18 @@ public class Libro extends Risorsa {
 
     public Libro(String titolo, int annoPublicazione, String codice, String autore) {
         super(titolo, annoPublicazione, codice);
-        this.autore = autore;
+
+        if (autore == null || autore.trim().isEmpty()) {
+            this.autore = "Autore sconosciuto";
+        } else {
+            this.autore = autore;
+        }
     }
 
     @Override
     public void visualizzaDettagli() {
-        System.out.println("\n| Titolo: " + getTitolo());
-        System.out.println("| Anno Publicazione: " + getAnnoPublicazione());
-        System.out.println("| Codice: " + getCodice());
+        System.out.println("\n| " + super.toString());
+        System.out.println("| Anno Pubblicazione: " + getAnnoPublicazione());
         System.out.println("| Autore: " + autore);
         System.out.println("--------------------------------------");
     }
@@ -20,8 +24,11 @@ public class Libro extends Risorsa {
         return autore;
     }
 
-    public void setAutore(String Autore) {
-        this.autore = Autore;
+    public void setAutore(String autore) {
+        if (autore != null && !autore.trim().isEmpty()) {
+            this.autore = autore;
+        } else {
+            System.out.println("Autore non valido. Operazione ignorata.");
+        }
     }
-
 }
