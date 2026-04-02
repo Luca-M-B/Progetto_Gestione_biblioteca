@@ -67,13 +67,13 @@ public class Main {
 
                     while (cont) {
 
-                        System.out.println("1 - Rivista");
-                        System.out.println("2 - Libro ");
-                        System.out.println("3 - Ebook");
-                        System.out.println("4 - Torna al menu principale");
+                    System.out.println("1 - Rivista");
+                    System.out.println("2 - Libro ");
+                    System.out.println("3 - Ebook");
+                    System.out.println("4 - Torna al menu principale");
 
-                        System.out.println("Cosa Vuoi inserire?: ");
-                        int sc = myint.nextInt();
+                    System.out.println("Cosa Vuoi inserire?: ");
+                    int sc = myint.nextInt();
 
                         switch (sc) {
                             case 1:
@@ -159,8 +159,89 @@ public class Main {
                 case 3:
                     biblioteca.stampaInventario();
                     break;
-                case 4:
+                case 4:         
+                    boolean in=true;
 
+                        while (in) 
+                        {
+                            
+                        System.out.println("1 - Prendere");
+                        System.out.println("2 - Riportare");
+                        System.out.println("3 - Esci");
+                        System.out.println("Cosa vuoi fare?: ");
+                        int scf=myint.nextInt();
+
+                            switch (scf) 
+                            {   
+                                case 1:
+
+                                    System.out.println("1 - Libro");
+                                    System.out.println("2 - Rivista");
+                                    System.out.println("3 - Ebook");
+
+                                    System.out.println("Cosa vuoi prendere?: ");
+                                    int prend=myint.nextInt();
+
+                                    switch (prend) 
+                                    {
+                                        case 1:
+                                            
+
+                                            break;
+                                        case 2:
+
+                                        
+                                            break;
+                                        case 3:
+
+                                            break;
+                                        default:
+                                            System.out.println("Caso non trovato");
+                                    }
+
+
+                                    break;
+                                case 2:
+
+                                    System.out.println("1 - Libro");
+                                    System.out.println("2 - Rivista");
+                                    System.out.println("3 - Ebook");
+
+                                    System.out.println("Cosa vuoi Riportare?: ");
+                                    int riport=myint.nextInt();
+
+                                    switch (riport) 
+                                    {
+                                        case 1:
+                                            
+                                            break;
+                                        case 2:
+
+                                            break;
+                                        case 3:
+
+                                            break;
+                                        default:
+                                            System.out.println("Caso non trovato");
+                                    }    
+
+
+
+                                     break;   
+                                
+                                
+                                case 3:
+
+                                    in=false;
+                                    break;
+
+                                default:
+                                    System.out.println("Caso non trovato");
+                            } 
+                            
+                        }
+                        
+                    
                     break;
 
                 case 5:
