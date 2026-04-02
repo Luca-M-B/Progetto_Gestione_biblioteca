@@ -47,4 +47,13 @@ public class Biblioteca {
 
         return risultati;
     }
+
+    public void prestaRisorsa(Utente utente, Risorsa risorsa) {
+        if (utentiIscritti.contains(utente) && risorseDisponibili.contains(risorsa)) {
+            utente.prendiInPrestito(risorsa);
+        } else {
+            System.out.println("Utente o risorsa non validi.");
+        }
+    }
+
 }
