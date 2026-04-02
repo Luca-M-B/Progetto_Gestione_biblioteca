@@ -1,15 +1,20 @@
 public class Ebook extends Risorsa {
 
+    private static int contatore = 0;
     private String formato;
 
-    public Ebook(String titolo, int annoPublicazione, String codice, String formato) {
-        super(titolo, annoPublicazione, codice);
+    public Ebook(String titolo, int annoPublicazione, String formato) {
+        super(titolo, annoPublicazione, generaCodice());
 
         if (formato == null || formato.trim().isEmpty()) {
             this.formato = "Formato sconosciuto";
         } else {
             this.formato = formato;
         }
+    }
+
+    private static String generaCodice() {
+        return String.format("EB-%03d", ++contatore);
     }
 
     @Override
