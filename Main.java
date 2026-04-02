@@ -90,7 +90,7 @@ public class Main {
                     { 
                         
                         switch (sc) 
-                    {
+                             {
                         case 1: 
                                 //Aggiunta Rivista
 
@@ -103,13 +103,16 @@ public class Main {
                                 System.out.println("Inserisci Codice univoco");
                                 String cod=mystr.nextLine();
 
-                                 System.out.println("Inserisci Numero Rivista: ");
-                                int nriv=mystr.nextInt();
+                                 System.out.println("Inserisci Numero di Riviste: ");
+                                int nriv=myint.nextInt();
                                 
                                 Rivista riv=new Rivista(titr, adp, cod, nriv);
                                 biblioteca.aggiungiRisorsa(riv);
 
                                  System.out.println("Rivista aggiunto!");
+
+                            myint.close();
+                            mystr.close();
                             break;
                         case 2:
                                 //Aggiunta Libro
@@ -129,7 +132,9 @@ public class Main {
                                 biblioteca.aggiungiRisorsa(lib);
 
                                  System.out.println("Libro aggiunto!");
-
+                                
+                                myint.close();
+                            mystr.close();
                             break;
                         case 3: 
                                 //Aggiunta Ebook
@@ -150,6 +155,8 @@ public class Main {
 
                                 System.out.println("Ebook aggiunto!");
 
+                                myint.close();
+                            mystr.close();
                             break;
                         case 4:
                             //esci Switch interno
@@ -168,7 +175,8 @@ public class Main {
                             break;
                     case 4:
 
-                            
+
+
 
 
 
