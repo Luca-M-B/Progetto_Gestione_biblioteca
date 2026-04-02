@@ -53,19 +53,3 @@ public abstract class Risorsa {
     }
 
 }
-<<<<<<< Updated upstream
-
-/*
- * if (!libro.inPrestito) { // verifico se dipsonibile
- * libro.inPrestito = true; // setto variabile a true
- * libro.dataPrestito = System.currentTimeMillis();
- * 
- * utente.libriPresi.add(libro);
- * 
- * System.out.println("Libro dato in prestito");
- * } else {
- * System.out.println("Libro già in prestito");
- * }
- */
-=======
->>>>>>> Stashed changes

@@ -1,11 +1,8 @@
 public class Rivista extends Risorsa {
     private int numero_rivista;
 
-<<<<<<< Updated upstream
-    public Rivista(String titolo, int annoPublicazione, String codice, int numero_rivista) {
-=======
+
      public Rivista(String titolo,int annoPublicazione,String codice,int numero_rivista) {
->>>>>>> Stashed changes
         super(titolo, annoPublicazione, codice);
         this.numero_rivista = numero_rivista;
     }
