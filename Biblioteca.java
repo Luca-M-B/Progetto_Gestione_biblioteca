@@ -25,7 +25,7 @@ public class Biblioteca {
     }
 
     public void stampaInventario() {
-        System.out.println("Inventario biblioteca: " + nome);
+        System.out.println("Inventario biblioteca " + nome + ":\n");
 
         if (risorseDisponibili.isEmpty()) {
             System.out.println("Nessuna risorsa disponibile.");
