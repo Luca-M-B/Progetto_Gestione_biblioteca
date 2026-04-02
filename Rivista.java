@@ -1,7 +1,9 @@
 public class Rivista extends Risorsa {
     private int numeroRivista;
 
+
     public Rivista(String titolo, int annoPublicazione, String codice, int numero_rivista) {
+
         super(titolo, annoPublicazione, codice);
         this.numeroRivista = numero_rivista;
     }
