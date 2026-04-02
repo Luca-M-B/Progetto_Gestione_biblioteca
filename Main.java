@@ -6,8 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
         Biblioteca biblioteca = new Biblioteca("Biblio");
-
-        Utente utente2 = new Utente("Ugo");
         /*
          * Libro libro1 = new Libro("titolo", 2000, "codice", "autore");
          * Libro libro2 = new Libro("titolo2", 2000, "codice2", "autore2");
@@ -33,6 +31,7 @@ public class Main {
          * biblioteca.aggiungiRisorsa(rivista3);
          */
 
+        
         boolean continua = true;
         Scanner myint = new Scanner(System.in);
         Scanner mystr = new Scanner(System.in);
@@ -89,12 +88,14 @@ public class Main {
                                 String cod = mystr.nextLine();
 
                                 System.out.println("Inserisci Numero Rivista: ");
-                                int nriv = mystr.nextInt();
+                                int nriv = myint.nextInt();
 
                                 Rivista riv = new Rivista(titr, adp, cod, nriv);
                                 biblioteca.aggiungiRisorsa(riv);
 
                                 System.out.println("Rivista aggiunto!");
+
+                                
                                 break;
 
                             case 2:
@@ -117,6 +118,7 @@ public class Main {
 
                                 System.out.println("Libro aggiunto!");
 
+                                
                                 break;
 
                             case 3:
@@ -139,6 +141,7 @@ public class Main {
 
                                 System.out.println("Ebook aggiunto!");
 
+                                
                                 break;
 
                             case 4:
@@ -158,7 +161,10 @@ public class Main {
                 case 3:
                     biblioteca.stampaInventario();
                     break;
-                case 4:
+                case 4: 
+                        
+
+
 
                     break;
 
