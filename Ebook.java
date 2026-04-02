@@ -7,12 +7,12 @@ public class Ebook extends Risorsa {
     }
 
     @Override
-    void visualizzaDettagli() {
+    public void visualizzaDettagli() {
         System.out.println("\n| Titolo: " + getTitolo());
         System.out.println("| Anno Publicazione: " + getAnnoPublicazione());
         System.out.println("| Codice: " + getCodice());
         System.out.println("| Tipo formato: " + formato);
-         System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
     }
 
     public String getFormato() {

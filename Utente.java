@@ -22,17 +22,19 @@ public class Utente {
     }
 
     public void prendiInPrestito(Risorsa risorsa) {
-        if (risorsa != null && !risorsePrese.contains(risorsa)) {
+        if (risorsa != null && !risorsePrese.contains(risorsa) && !risorsa.isPrestito()) {
             risorsePrese.add(risorsa);
-            System.out.println(nome + " ha preso in prestito: " + risorsa);
+            risorsa.setPrestito(true);
+            System.out.println(nome + " ha preso in prestito: " + risorsa.getTitolo());
         } else {
-            System.out.println("Risorsa non valida.");
+            System.out.println("Risorsa non disponibile.");
         }
     }
 
     public void restituisciRisorsa(Risorsa risorsa) {
         if (risorsePrese.remove(risorsa)) {
-            System.out.println(nome + " ha restituito: " + risorsa);
+            risorsa.setPrestito(false);
+            System.out.println(nome + " ha restituito: " + risorsa.getTitolo());
         } else {
             System.out.println("Risorsa non trovata tra i prestiti.");
         }
