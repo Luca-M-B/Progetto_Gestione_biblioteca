@@ -2,8 +2,8 @@ public class Ebook extends Risorsa
 {
     private String formato;
 
-         public Ebook(String titolo,int annoPublicazione,String codice,String formato) {
-        super(titolo, annoPublicazione, codice);
+         public Ebook(String titolo,int annoPublicazione,String codice,String formato,boolean prestito) {
+        super(titolo, annoPublicazione, codice,prestito);
 
         this.formato=formato;
     }

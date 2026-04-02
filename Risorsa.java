@@ -3,12 +3,14 @@ public class Risorsa
     private String titolo;
     private int annoPublicazione;
     private String codice;
+    private boolean prestito;
 
     public Risorsa(String titolo,int annoPublicazione,String codice) 
     {
         this.titolo=titolo;
         this.annoPublicazione=annoPublicazione;
         this.codice=codice;
+        this.prestito=false;
     }
 
     void visualizzaDettagli()
@@ -16,6 +18,7 @@ public class Risorsa
         System.out.println("Titolo: "+titolo );
         System.out.println("Anno Publicazione: "+annoPublicazione );
         System.out.println("Codice: "+codice);
+        System.out.println("Prestito: "+prestito);
     }
 
     public String getTitolo() {
@@ -42,5 +45,30 @@ public class Risorsa
         this.codice = codice;
     }
 
+    public boolean isPrestito() {
+        return prestito;
+    }
+
+    public void setPrestito(boolean prestito) 
+    {
+        
+            this.prestito = prestito;
+    }
+
+
 
 }
+
+
+/*
+if (!libro.inPrestito) { // verifico se dipsonibile
+                            libro.inPrestito = true; // setto variabile a true
+                            libro.dataPrestito = System.currentTimeMillis();
+
+                            utente.libriPresi.add(libro);
+
+                            System.out.println("Libro dato in prestito");
+                        } else {
+                            System.out.println("Libro già in prestito");
+                        }
+*/
