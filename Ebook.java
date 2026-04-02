@@ -1,17 +1,22 @@
 public class Ebook extends Risorsa {
+
     private String formato;
 
     public Ebook(String titolo, int annoPublicazione, String codice, String formato) {
         super(titolo, annoPublicazione, codice);
-        this.formato = formato;
+
+        if (formato == null || formato.trim().isEmpty()) {
+            this.formato = "Formato sconosciuto";
+        } else {
+            this.formato = formato;
+        }
     }
 
     @Override
     public void visualizzaDettagli() {
-        System.out.println("\n| Titolo: " + getTitolo());
-        System.out.println("| Anno Publicazione: " + getAnnoPublicazione());
-        System.out.println("| Codice: " + getCodice());
-        System.out.println("| Tipo formato: " + formato);
+        System.out.println("\n| " + super.toString());
+        System.out.println("| Anno Pubblicazione: " + getAnnoPublicazione());
+        System.out.println("| Formato: " + formato);
         System.out.println("--------------------------------------");
     }
 
@@ -20,7 +25,10 @@ public class Ebook extends Risorsa {
     }
 
     public void setFormato(String formato) {
-        this.formato = formato;
+        if (formato != null && !formato.trim().isEmpty()) {
+            this.formato = formato;
+        } else {
+            System.out.println("Formato non valido. Operazione ignorata.");
+        }
     }
-
 }
