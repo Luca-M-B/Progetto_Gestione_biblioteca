@@ -1,17 +1,22 @@
 public class Rivista extends Risorsa {
     private int numero_rivista;
 
+<<<<<<< Updated upstream
     public Rivista(String titolo, int annoPublicazione, String codice, int numero_rivista) {
+=======
+     public Rivista(String titolo,int annoPublicazione,String codice,int numero_rivista) {
+>>>>>>> Stashed changes
         super(titolo, annoPublicazione, codice);
         this.numero_rivista = numero_rivista;
     }
 
     @Override
     void visualizzaDettagli() {
-        System.out.println("Titolo: " + getTitolo());
-        System.out.println("Anno Publicazione: " + getAnnoPublicazione());
-        System.out.println("Codice: " + getCodice());
-        System.out.println("Numero Rivista: " + numero_rivista);
+        System.out.println("\n| Titolo: " + getTitolo());
+        System.out.println("| Anno Publicazione: " + getAnnoPublicazione());
+        System.out.println("| Codice: " + getCodice());
+        System.out.println("| Numero Rivista: " + numero_rivista);
+         System.out.println("--------------------------------------");
     }
 
     public int getNumero_rivista() {

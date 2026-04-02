@@ -11,10 +11,11 @@ public class Libro extends Risorsa
     @Override
      void visualizzaDettagli()
     {
-        System.out.println("Titolo: "+getTitolo());
-        System.out.println("Anno Publicazione: "+getAnnoPublicazione());
-        System.out.println("Codice: "+getCodice());
-        System.out.println("Autore"+autore);
+        System.out.println("\n| Titolo: "+getTitolo());
+        System.out.println("| Anno Publicazione: "+getAnnoPublicazione());
+        System.out.println("| Codice: "+getCodice());
+        System.out.println("| Autore"+autore);
+         System.out.println("--------------------------------------");
     }
 
     public String getAutore() {

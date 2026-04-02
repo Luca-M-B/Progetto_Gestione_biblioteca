@@ -53,6 +53,7 @@ public abstract class Risorsa {
     }
 
 }
+<<<<<<< Updated upstream
 
 /*
  * if (!libro.inPrestito) { // verifico se dipsonibile
@@ -66,3 +67,5 @@ public abstract class Risorsa {
  * System.out.println("Libro già in prestito");
  * }
  */
+=======
+>>>>>>> Stashed changes
