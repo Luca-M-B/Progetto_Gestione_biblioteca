@@ -31,7 +31,6 @@ public class Main {
          * biblioteca.aggiungiRisorsa(rivista3);
          */
 
-        
         boolean continua = true;
         Scanner myint = new Scanner(System.in);
         Scanner mystr = new Scanner(System.in);
@@ -60,19 +59,21 @@ public class Main {
                     System.out.println("Utente Aggiunto con successo");
 
                     break;
+
                 case 2:
 
                     // inserire i libri riviste ed ebook
                     boolean cont = true;
 
-                    System.out.println("1 - Rivista");
-                    System.out.println("2 - Libro ");
-                    System.out.println("3 - Ebook");
-                    System.out.println("4 - Torna al menu principale");
-
-                    System.out.println("Cosa Vuoi inserire?: ");
-                    int sc = myint.nextInt();
                     while (cont) {
+
+                        System.out.println("1 - Rivista");
+                        System.out.println("2 - Libro ");
+                        System.out.println("3 - Ebook");
+                        System.out.println("4 - Torna al menu principale");
+
+                        System.out.println("Cosa Vuoi inserire?: ");
+                        int sc = myint.nextInt();
 
                         switch (sc) {
                             case 1:
@@ -95,7 +96,6 @@ public class Main {
 
                                 System.out.println("Rivista aggiunto!");
 
-                                
                                 break;
 
                             case 2:
@@ -118,7 +118,6 @@ public class Main {
 
                                 System.out.println("Libro aggiunto!");
 
-                                
                                 break;
 
                             case 3:
@@ -141,7 +140,6 @@ public class Main {
 
                                 System.out.println("Ebook aggiunto!");
 
-                                
                                 break;
 
                             case 4:
@@ -161,10 +159,7 @@ public class Main {
                 case 3:
                     biblioteca.stampaInventario();
                     break;
-                case 4: 
-                        
-
-
+                case 4:
 
                     break;
 
@@ -179,6 +174,9 @@ public class Main {
             }
 
         }
+
+        myint.close();
+        mystr.close();
 
     }
 }
