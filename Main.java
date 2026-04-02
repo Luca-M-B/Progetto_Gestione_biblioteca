@@ -91,17 +91,68 @@ public class Main {
                         
                         switch (sc) 
                     {
-                        case 1:
+                        case 1: 
+                                //Aggiunta Rivista
 
+                                System.out.println("Inserisci Titolo: ");
+                                String titr=mystr.nextLine();
+
+                                System.out.println("Inserisci anno di Publicazione");
+                                int adp=myint.nextInt();
+
+                                System.out.println("Inserisci Codice univoco");
+                                String cod=mystr.nextLine();
+
+                                 System.out.println("Inserisci Numero Rivista: ");
+                                int nriv=mystr.nextInt();
+                                
+                                Rivista riv=new Rivista(titr, adp, cod, nriv);
+                                biblioteca.aggiungiRisorsa(riv);
+
+                                 System.out.println("Rivista aggiunto!");
                             break;
                         case 2:
+                                //Aggiunta Libro
+                                System.out.println("Inserisci Titolo: ");
+                                String titl=mystr.nextLine();
+
+                                System.out.println("Inserisci anno di Publicazione");
+                                int adpl=myint.nextInt();
+
+                                System.out.println("Inserisci Codice univoco");
+                                String codl=mystr.nextLine();
+
+                                 System.out.println("Inserisci Nome Autore: ");
+                                String nou=mystr.nextLine();
+                                
+                                Libro lib=new Libro(titl, adpl, codl, nou);
+                                biblioteca.aggiungiRisorsa(lib);
+
+                                 System.out.println("Libro aggiunto!");
 
                             break;
-                        case 3:
+                        case 3: 
+                                //Aggiunta Ebook
+                                 System.out.println("Inserisci Titolo: ");
+                                String tite=mystr.nextLine();
+
+                                System.out.println("Inserisci anno di Publicazione");
+                                int adpe=myint.nextInt();
+
+                                System.out.println("Inserisci Codice univoco");
+                                String code=mystr.nextLine();
+
+                                 System.out.println("Inserisci Tipo Formato: (PDF,EPUB)");
+                                String form=mystr.nextLine();
+                                
+                                Ebook eb=new Ebook(tite, adpe, code, form);
+                                biblioteca.aggiungiRisorsa(eb);    
+
+                                System.out.println("Ebook aggiunto!");
 
                             break;
                         case 4:
-
+                            //esci Switch interno
                         cont=false;
                             break;
                         
@@ -116,6 +167,21 @@ public class Main {
                             biblioteca.stampaInventario();
                             break;
                     case 4:
+
+                            
+
+
+
+
+
+
+
+
+                        break;
+
+
+                    case 5:
+                        //esci Switch principale
                     System.out.println("Arrivederci");
                         continua=false;
                         break;
@@ -130,13 +196,6 @@ public class Main {
 
             
         }
-
-
-
-
-
-
-
 
     }
 }
