@@ -67,13 +67,13 @@ public class Main {
 
                     while (cont) {
 
-                    System.out.println("1 - Rivista");
-                    System.out.println("2 - Libro ");
-                    System.out.println("3 - Ebook");
-                    System.out.println("4 - Torna al menu principale");
+                        System.out.println("1 - Rivista");
+                        System.out.println("2 - Libro ");
+                        System.out.println("3 - Ebook");
+                        System.out.println("4 - Torna al menu principale");
 
-                    System.out.println("Cosa Vuoi inserire?: ");
-                    int sc = myint.nextInt();
+                        System.out.println("Cosa Vuoi inserire?: ");
+                        int sc = myint.nextInt();
 
                         switch (sc) {
                             case 1:
@@ -91,7 +91,7 @@ public class Main {
                                 Rivista riv = new Rivista(titr, adp, nriv);
                                 biblioteca.aggiungiRisorsa(riv);
 
-                                System.out.println("Rivista aggiunto!");
+                                System.out.println("Rivista aggiunta!");
 
                                 break;
 
@@ -150,89 +150,78 @@ public class Main {
                 case 3:
                     biblioteca.stampaInventario();
                     break;
-                case 4:         
-                    boolean in=true;
+                case 4:
+                    boolean in = true;
 
-                        while (in) 
-                        {
-                            
+                    while (in) {
+
                         System.out.println("1 - Prendere");
                         System.out.println("2 - Riportare");
                         System.out.println("3 - Esci");
                         System.out.println("Cosa vuoi fare?: ");
-                        int scf=myint.nextInt();
+                        int scf = myint.nextInt();
 
-                            switch (scf) 
-                            {   
-                                case 1:
+                        switch (scf) {
+                            case 1:
 
-                                    System.out.println("1 - Libro");
-                                    System.out.println("2 - Rivista");
-                                    System.out.println("3 - Ebook");
+                                System.out.println("1 - Libro");
+                                System.out.println("2 - Rivista");
+                                System.out.println("3 - Ebook");
 
-                                    System.out.println("Cosa vuoi prendere?: ");
-                                    int prend=myint.nextInt();
+                                System.out.println("Cosa vuoi prendere?: ");
+                                int prend = myint.nextInt();
 
-                                    switch (prend) 
-                                    {
-                                        case 1:
-                                            
+                                switch (prend) {
+                                    case 1:
 
-                                            break;
-                                        case 2:
+                                        break;
+                                    case 2:
 
-                                        
-                                            break;
-                                        case 3:
+                                        break;
+                                    case 3:
 
-                                            break;
-                                        default:
-                                            System.out.println("Caso non trovato");
-                                    }
+                                        break;
+                                    default:
+                                        System.out.println("Caso non trovato");
+                                }
 
+                                break;
+                            case 2:
 
-                                    break;
-                                case 2:
+                                System.out.println("1 - Libro");
+                                System.out.println("2 - Rivista");
+                                System.out.println("3 - Ebook");
 
-                                    System.out.println("1 - Libro");
-                                    System.out.println("2 - Rivista");
-                                    System.out.println("3 - Ebook");
+                                System.out.println("Cosa vuoi Riportare?: ");
+                                int riport = myint.nextInt();
 
-                                    System.out.println("Cosa vuoi Riportare?: ");
-                                    int riport=myint.nextInt();
+                                switch (riport) {
+                                    case 1:
 
-                                    switch (riport) 
-                                    {
-                                        case 1:
-                                            
-                                            break;
-                                        case 2:
+                                        break;
+                                    case 2:
 
-                                            break;
-                                        case 3:
+                                        break;
+                                    case 3:
 
-                                            break;
-                                        default:
-                                            System.out.println("Caso non trovato");
-                                    }    
+                                        break;
+                                    default:
+                                        System.out.println("Caso non trovato");
+                                }
 
+                                break;
 
+                            case 3:
 
-                                     break;   
-                                
-                                
-                                case 3:
+                                in = false;
+                                break;
 
-                                    in=false;
-                                    break;
-
-                                default:
-                                    System.out.println("Caso non trovato");
-                            } 
-                            
+                            default:
+                                System.out.println("Caso non trovato");
                         }
-                        
-                    
+
+                    }
+
                     break;
 
                 case 5:
